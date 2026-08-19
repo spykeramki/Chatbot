@@ -47,51 +47,6 @@ def stream_graph_updates(user_input: str):
             print(f"Assistant: {assistant_response}\n")
 
 
-    # Initialize chat history
-# messages = [
-#         {"role": "system", "content": "You are a helpful, direct local AI assistant."}
-#     ]
-
-# def chat_with_bonsai():
-#     print("🤖 Local AI Session Started. Type 'quit' to exit.\n")
-    
-
-#     while True:
-#         user_input = input("You: ")
-#         if user_input.lower() == 'quit':
-#             break
-            
-#         # Append user message to history
-#         messages.append({"role": "user", "content": user_input})
-
-#         try:
-#             # 2. Call the local model
-#             # Note: LM Studio automatically routes requests to whichever model is currently loaded,
-#             # so the 'model' parameter string can be anything (e.g., "local-model").
-#             response = bonsai_client.chat.completions.create(
-#                 model="prism-ml/bonsai-27b",
-#                 messages=messages,
-#                 stream=True  # Enables word-by-word streaming responses
-#             )
-
-#             print("AI: ", end="", flush=True)
-#             assistant_response = ""
-            
-#             # 3. Stream the tokens as they are generated
-#             for chunk in response:
-#                 if chunk.choices[0].delta.content:
-#                     token = chunk.choices[0].delta.content
-#                     print(token, end="", flush=True)
-#                     assistant_response += token
-#             print("\n")
-
-#             # Append the assistant's reply to keep the conversation history
-#             messages.append({"role": "assistant", "content": assistant_response})
-
-#         except Exception as e:
-#             print(f"\n❌ Error connecting to LM Studio: {e}")
-#             print("Make sure the server is running in LM Studio and the port is correct.\n")
-
 if __name__ == "__main__":
     while True:
         try:
