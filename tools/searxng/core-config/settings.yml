@@ -1,0 +1,15 @@
+#ignored to git files
+
+use_default_settings: true
+
+server: 
+  secret_key: "OWaxAyf4g20VcXlaIfibVVOoLY41ZKl"
+  image_proxy: true
+
+search: #needed to get permission to use the search engine
+  safe_search: false
+  default_lang: "en"
+  default_category: "general"
+  formats:
+    - "json"
+    - "html"
